@@ -1,15 +1,19 @@
 # FSallinone.ai
 FS ALL IN ONE AI
-gh repo clone Fai-Sal-0119/FSallinone.ai
-cd FSallinone.ai
-pip install -r requirements.txt
-python main.py
-http://localhost:8000 http://localhost:8000/docs http://localhost:8000/redoc # Health check
-curl http://localhost:8000/health
-
-# Prediction करें
-curl -X POST http://localhost:8000/predict \
-  -H "Content-Type: application/json" \
-  -d '{"features": [1, 2, 3, 4, 5]}' git add .
-git commit -m "Added AI features"
-git push origin main
+ai-app/
+├── backend/                    # Node.js/Express server
+│   ├── routes/                 # API endpoints
+│   ├── controllers/            # Business logic
+│   ├── middleware/             # Auth, validation
+│   ├── services/               # AI integrations
+│   ├── models/                 # Database schemas
+│   └── config/                 # Environment setup
+├── frontend/                   # React/Vue UI
+│   ├── components/             # Reusable UI
+│   ├── pages/                  # Routes
+│   ├── services/               # API calls
+│   └── styles/                 # CSS/Tailwind
+├── database/                   # SQLite/PostgreSQL
+├── docker-compose.yml          # Local dev setup
+├── .env.example                # Config template
+└── README.md                   # Documentation
